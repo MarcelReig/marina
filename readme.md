@@ -14,7 +14,7 @@ Estas son las tareas que hace Gulp:
   - JavaScript comprimido
   - Imagenes comprimidas
   
-De momento Gulp no te rellena la taza de Té, pero alguién hará una tarea para eso pronto.
+De momento Gulp no te rellena la taza de Té, pero alguién hará una tarea para eso pronto :tada:.
 
 ## Instalación
 Para utilizar esta plantilla, tu máquina necesita:
