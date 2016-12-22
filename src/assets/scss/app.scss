@@ -1,0 +1,212 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+
+@include foundation-global-styles;
+@include foundation-grid;
+// @include foundation-flex-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+// @include foundation-range-input;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-card;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-responsive-embed;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+// @include foundation-progress-element;
+// @include foundation-meter-element;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+// @include foundation-flex-classes;
+
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
+$gray-light: #F5F5F5;
+$gray: #212121;
+
+.ma-top-50 {
+  margin-top:50px;
+}
+
+// Top bar
+
+.top-bar,.top-bar ul,.title-bar {
+  background-color: transparent;
+	li > a {
+		color: $gray;
+    &:hover{
+         transition: color .1s 0s ease-in-out;
+         color: lighten( $gray, 30% );
+	  }
+  }
+}
+.menu li.menu-text > a {
+	display: inline;
+	color: $gray;
+}
+.title-bar-left > .title-bar-title {
+  margin-left: 10px;
+}
+.title-bar-title, .menu-icon {
+  color: $gray;
+	 &:hover {
+         transition: color .1s 0s ease-in-out;
+      	 color: lighten( $gray, 30% );
+    }
+  font-family: 'Dancing Script', cursive;
+  font-size: 25px;
+}
+.centered-logo {
+  position: absolute;
+  left: calc(50% - 33px);
+  top:5px;
+}
+footer {
+  padding-top: 20px;
+  background-color: transparent;
+}
+
+.imagelist {
+            a {
+              color: $gray;
+            }
+
+            h5 {
+              text-align: center;
+              padding-top: 20px;
+            }
+            .bg-color {
+              background-color: $gray;}
+            img {
+                min-width: 100%;
+                mix-blend-mode: luminosity;
+              }
+             &:hover{
+               a {
+                  transition: color .1s 0s ease-in-out;
+                  color: lighten( $gray, 30% );
+               }
+                img {
+                  min-width: 100%;
+                  mix-blend-mode: unset;
+              }
+           }
+}
+.titulo {
+  position: relative;
+  color: lighten( $gray, 30% );
+  margin-bottom: 50px;
+}
+hr.line-center {
+    background-color: lighten( $gray, 30% );
+    border: 0 none;
+    color: lighten( $gray, 30% );
+    height: 1px;
+    width: 100px;
+    position: absolute;
+    left: calc(50% - 50px);
+    top:20px;
+}
+
+// Gallery
+
+main {
+  margin: 0 auto;
+  min-width: 100%;
+  overflow: hidden;
+}
+img {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+.gallery {
+  width: auto;
+  margin: 0 auto;
+  overflow: auto;
+  zoom: 1;
+  clear: both;
+}
+
+.gallery.simple {
+  text-align: center;
+}
+
+.gallery figure,
+.gallery > .item-selector,
+.gallery.simple img {
+  width: 270px;
+  margin: 16px;
+  padding: 0px;
+}
+
+.image-wrapper,
+.gallery figure {
+  float: left;
+
+}
+
+.gallery figure figcaption {
+  padding: 0.5em;
+}
+
+.gallery.simple img {
+  display: inline;
+  vertical-align: middle;
+}
+
+.gallery img {
+  cursor: pointer;
+}
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+  .gallery {
+    width: auto !important;
+    overflow: hidden !important;
+  .gallery figure,
+  .gallery > .item-selector,
+  .gallery.simple img {
+    width: auto !important;
+    margin: 5px 0 !important;
+  }
+  main {
+    margin: 0 auto;
+    min-width: 100%;
+    overflow: hidden;
+  }
+}
+}
