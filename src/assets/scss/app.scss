@@ -68,6 +68,31 @@ $gray: #212121;
     }
 }
 
+// Menu vertical small sizes
+.off-canvas {
+    background: #fff;
+    .menu.vertical {
+        margin-top: 50px;
+        li {
+            background-color: #fff;
+            a {
+                text-transform: uppercase;
+                text-align: right;
+                color: #222;
+                padding: 0.8rem 1rem;
+                line-height: 1;
+                -webkit-transition: all 0.4s;
+                -moz-transition: all 0.4s;
+                -o-transition: all 0.4s;
+                transition: all 0.4s;
+                &:hover {
+                    background: #f2f2f2;
+                }
+            }
+        }
+    }
+}
+
 .menu li.menu-text>a {
     display: inline;
     color: $gray;
