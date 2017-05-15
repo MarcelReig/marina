@@ -1,9 +1,8 @@
 @charset 'utf-8';
-
+@import 'magnific-popup';
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
-
 @include foundation-global-styles;
 @include foundation-grid;
 // @include foundation-flex-grid;
@@ -46,167 +45,144 @@
 @include foundation-visibility-classes;
 @include foundation-float-classes;
 // @include foundation-flex-classes;
-
 @include motion-ui-transitions;
 @include motion-ui-animations;
-
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script');
-
 $gray-light: #F5F5F5;
 $gray: #212121;
-
 .ma-top-50 {
-  margin-top:50px;
+    margin-top: 50px;
 }
 
 // Top bar
-
-.top-bar,.top-bar ul,.title-bar {
-  background-color: transparent;
-	li > a {
-		color: $gray;
-    &:hover{
-         transition: color .1s 0s ease-in-out;
-         color: lighten( $gray, 30% );
-	  }
-  }
-}
-.menu li.menu-text > a {
-	display: inline;
-	color: $gray;
-}
-.title-bar-left > .title-bar-title {
-  margin-left: 10px;
-}
-.title-bar-title, .menu-icon {
-  color: $gray;
-	 &:hover {
-         transition: color .1s 0s ease-in-out;
-      	 color: lighten( $gray, 30% );
+.top-bar,
+.top-bar ul,
+.title-bar {
+    background-color: transparent;
+    li>a {
+        color: $gray;
+        &:hover {
+            transition: color .1s 0s ease-in-out;
+            color: lighten( $gray, 30%);
+        }
     }
-  font-family: 'Dancing Script', cursive;
-  font-size: 25px;
 }
+
+// Menu vertical small sizes
+.off-canvas {
+    background: #fff;
+    .menu.vertical {
+        margin-top: 50px;
+        li {
+            background-color: #fff;
+            a {
+                text-transform: uppercase;
+                text-align: right;
+                color: #222;
+                padding: 0.8rem 1rem;
+                line-height: 1;
+                -webkit-transition: all 0.4s;
+                -moz-transition: all 0.4s;
+                -o-transition: all 0.4s;
+                transition: all 0.4s;
+                &:hover {
+                    background: #f2f2f2;
+                }
+            }
+        }
+    }
+}
+
+.menu li.menu-text>a {
+    display: inline;
+    color: $gray;
+}
+
+.title-bar-left>.title-bar-title {
+    margin-left: 10px;
+}
+
+.title-bar-title,
+.menu-icon {
+    color: $gray;
+    &:hover {
+        transition: color .1s 0s ease-in-out;
+        color: lighten( $gray, 30%);
+    }
+    font-family: 'Dancing Script',
+    cursive;
+    font-size: 25px;
+}
+
 .centered-logo {
-  position: absolute;
-  left: calc(50% - 33px);
-  top:5px;
+    position: absolute;
+    left: calc(50% - 33px);
+    top: 5px;
 }
+
 footer {
-  padding-top: 20px;
-  background-color: transparent;
+    padding-top: 20px;
+    background-color: transparent;
 }
 
 .imagelist {
-            a {
-              color: $gray;
-            }
+    a {
+        color: $gray;
+    }
+    h5 {
+        text-align: center;
+        padding-top: 20px;
+    }
+    .bg-color {
+        background-color: $gray;
+    }
+    img {
+        min-width: 100%;
+        mix-blend-mode: luminosity;
+    }
+    &:hover {
+        a {
+            transition: color .1s 0s ease-in-out;
+            color: lighten( $gray, 30%);
+        }
+        img {
+            min-width: 100%;
+            mix-blend-mode: unset;
+        }
+    }
+}
 
-            h5 {
-              text-align: center;
-              padding-top: 20px;
-            }
-            .bg-color {
-              background-color: $gray;}
-            img {
-                min-width: 100%;
-                mix-blend-mode: luminosity;
-              }
-             &:hover{
-               a {
-                  transition: color .1s 0s ease-in-out;
-                  color: lighten( $gray, 30% );
-               }
-                img {
-                  min-width: 100%;
-                  mix-blend-mode: unset;
-              }
-           }
-}
 .titulo {
-  position: relative;
-  color: lighten( $gray, 30% );
-  margin-bottom: 50px;
+    position: relative;
+    color: lighten( $gray, 30%);
+    margin-bottom: 50px;
 }
+
 hr.line-center {
-    background-color: lighten( $gray, 30% );
+    background-color: lighten( $gray, 30%);
     border: 0 none;
-    color: lighten( $gray, 30% );
+    color: lighten( $gray, 30%);
     height: 1px;
     width: 100px;
     position: absolute;
     left: calc(50% - 50px);
-    top:20px;
+    top: 20px;
 }
 
 // Gallery
-
-main {
-  margin: 0 auto;
-  min-width: 100%;
-  overflow: hidden;
-}
-img {
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-  line-height: 0;
-}
-
-.gallery {
-  width: auto;
-  margin: 0 auto;
-  overflow: auto;
-  zoom: 1;
-  clear: both;
-}
-
-.gallery.simple {
-  text-align: center;
-}
-
-.gallery figure,
-.gallery > .item-selector,
-.gallery.simple img {
-  width: 270px;
-  margin: 16px;
-  padding: 0px;
-}
-
-.image-wrapper,
-.gallery figure {
-  float: left;
-
-}
-
-.gallery figure figcaption {
-  padding: 0.5em;
-}
-
-.gallery.simple img {
-  display: inline;
-  vertical-align: middle;
-}
-
-.gallery img {
-  cursor: pointer;
-}
-
-/* Small only */
-@media screen and (max-width: 39.9375em) {
-  .gallery {
-    width: auto !important;
-    overflow: hidden !important;
-  .gallery figure,
-  .gallery > .item-selector,
-  .gallery.simple img {
-    width: auto !important;
-    margin: 5px 0 !important;
-  }
-  main {
+.grid {
     margin: 0 auto;
-    min-width: 100%;
-    overflow: hidden;
-  }
 }
+
+.grid-sizer,
+.grid-item {
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+
+/* 2 columns */
+
+.grid-item--width2 {
+    width: 600px;
 }

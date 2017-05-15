@@ -25,15 +25,12 @@ Para utilizar esta plantilla, tu máquina necesita:
 
 
 Puedes hacerte un Fork y hacer lo que quieras con la plantilla, los derechos de autor de las ilustraciones son de Marina Ibarra.
-### 
-
 
 ```
 
-Ejecuta `npm start` para correr Gulp. Tu sitio terminado se creará en la carpeta `dist`, visible en la URL:
+Ejecuta `npm start` para correr Gulp. Tu sitio terminado se creará en la carpeta `dist`, visible en la URL: http://localhost:8000
 
 ```
-http://localhost:8000
-```
+
 
 Para crear una versión comprimida, lista para producción, ejecuta `npm run build`.
