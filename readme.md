@@ -24,7 +24,8 @@ Para utilizar esta plantilla, tu máquina necesita:
 - [Git](https://git-scm.com/)
 
 
-Puedes hacerte un Fork y hacer lo que quieras con la plantilla, los derechos de autor de las ilustraciones son de Marina Ibarra.
+Puedes hacerte un Fork y utilizar la plantilla como quieras.
+Los derechos de autor de las ilustraciones son de Marina Ibarra.
 
 ```
 
